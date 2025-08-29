@@ -5,321 +5,591 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="Ismaila SY - PhD researcher in cybersecurity, expert in IT systems, networks, and AI-based security solutions." />
         <meta name="author" content="Ismaila SY" />
-        <title>Ismaila SY Phd</title>
+        <title>Ismaila SY | PhD Researcher in Cybersecurity</title>
         <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Tailwind CSS -->
+        <script src="https://cdn.tailwindcss.com"></script>
         <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+        <!-- Font Awesome icons -->
+        <script src="https://kit.fontawesome.com/6f3dce9d65.js" crossorigin="anonymous"></script>
+        <style>
+            body {
+                font-family: 'Inter', sans-serif;
+                scroll-behavior: smooth;
+            }
+            .gradient-bg {
+                background: linear-gradient(135deg, #1e3a8a 0%, #0ea5e9 100%);
+            }
+            .gradient-text {
+                background: linear-gradient(135deg, #0ea5e9 0%, #1e3a8a 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+            .section-title {
+                position: relative;
+                display: inline-block;
+            }
+            .section-title:after {
+                content: '';
+                position: absolute;
+                bottom: -8px;
+                left: 0;
+                width: 50px;
+                height: 4px;
+                background: linear-gradient(90deg, #0ea5e9, #1e3a8a);
+                border-radius: 2px;
+            }
+            .nav-link {
+                position: relative;
+                transition: all 0.3s ease;
+            }
+            .nav-link:after {
+                content: '';
+                position: absolute;
+                bottom: -5px;
+                left: 0;
+                width: 0;
+                height: 2px;
+                background: #0ea5e9;
+                transition: width 0.3s ease;
+            }
+            .nav-link:hover:after {
+                width: 100%;
+            }
+            .card-hover {
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            .card-hover:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            }
+            .skill-bar {
+                transition: width 1s ease-in-out;
+            }
+            .timeline-item {
+                position: relative;
+                padding-left: 30px;
+                margin-bottom: 30px;
+            }
+            .timeline-item:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 8px;
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                background: #0ea5e9;
+            }
+            .timeline-item:after {
+                content: '';
+                position: absolute;
+                left: 5px;
+                top: 25px;
+                width: 2px;
+                height: calc(100% + 10px);
+                background: #e5e7eb;
+            }
+            .timeline-item:last-child:after {
+                display: none;
+            }
+        </style>
     </head>
-    <body id="page-top">
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top">
-                <span class="d-block d-lg-none">Ismaila SY</span>
-                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/photo-cv.jpg" alt="..." /></span>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Research Interests</a></li>
-                    <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Awards</a></li> -->
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#publications">Publications</a></li>
-                </ul>
+    <body class="bg-gray-50 text-gray-800">
+        <!-- Navigation -->
+        <nav class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+            <div class="container mx-auto px-4">
+                <div class="flex justify-between items-center py-4">
+                    <a href="#" class="text-xl font-bold gradient-text">Ismaila SY</a>
+                    <div class="hidden md:flex space-x-8">
+                        <a href="#about" class="nav-link">About</a>
+                        <a href="#experience" class="nav-link">Experience</a>
+                        <a href="#education" class="nav-link">Education</a>
+                        <a href="#skills" class="nav-link">Skills</a>
+                        <a href="#interests" class="nav-link">Research</a>
+                        <a href="#publications" class="nav-link">Publications</a>
+                    </div>
+                    <div class="md:hidden">
+                        <button id="mobile-menu-button" class="text-gray-600 hover:text-blue-600">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+                <div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
+                    <a href="#about" class="py-2 px-4 rounded hover:bg-gray-100">About</a>
+                    <a href="#experience" class="py-2 px-4 rounded hover:bg-gray-100">Experience</a>
+                    <a href="#education" class="py-2 px-4 rounded hover:bg-gray-100">Education</a>
+                    <a href="#skills" class="py-2 px-4 rounded hover:bg-gray-100">Skills</a>
+                    <a href="#interests" class="py-2 px-4 rounded hover:bg-gray-100">Research</a>
+                    <a href="#publications" class="py-2 px-4 rounded hover:bg-gray-100">Publications</a>
+                </div>
             </div>
         </nav>
-        <!-- Page Content-->
-        <div class="container-fluid p-0">
-            <!-- About-->
-            <section class="resume-section" id="about">
-                <div class="resume-section-content">
-                    <h1 class="mb-0">
-                        Ismaila
-                        <span class="text-primary">SY</span>
-                    </h1>
-                    <div class="subheading mb-5">
-                        Pikine Icotaf · Dakar, Sénégal · (221) 77 122-22-85 ·
-                        <a href="mailto:ismaila.sy@uadb.edu.sn">name@email.com</a>
-                    </div>
-                    <p class="lead mb-5" style="text-align: justify;">I am a passionate Ph.D. researcher in cybersecurity with a focus on next-generation networks. I am a strong problem-solver with a natural curiosity for diving deep into complex problems and finding effective solutions. I am also committed to staying updated on the latest advancements in cybersecurity and adapting to the rapidly evolving threat landscape.</p>
-                    <div class="social-icons">
-                        <a class="social-icon" href="https://www.linkedin.com/in/ismaila-sy/"><i class="fab fa-linkedin-in" style="color: #0077B5;"></i></a>
-                        <a class="social-icon" href="https://github.com/ismailasy"><i class="fab fa-github" style="color: #181717;"></i></a>
-                        <a class="social-icon" href="https://twitter.com/Syismaila1"><i class="fab fa-twitter" style="color: #1DA1F2;"></i></a>
 
-                    </div>
-                </div>
-            </section>
-            <hr class="m-0" />
-            <!-- Experience-->
-            <section class="resume-section" id="experience">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Experience</h2>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Information System Ingineer</h3>
-                            <div class="subheading mb-3">Global Business Group  </div>
-                            <p>I am responsible for the design, development, and deployment of IT projects, with a particular emphasis on in-house development of human resources (HR) management and reporting solutions.</p>
-                            <ul> 
-                                <li>Designing, developing, and implementing new IT systems</li>
-                                <li>Managing and maintaining existing IT systems</li>
-                                <li>Troubleshooting and resolving IT problems</li>
-                                <li>Collaborating with cross-functional teams to ensure that IT systems meet the needs of the business</li>
-                            </ul>
+        <!-- Hero Section -->
+        <section id="about" class="pt-28 pb-16 gradient-bg text-white">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/3 mb-8 md:mb-0 flex justify-center">
+                        <div class="w-48 h-48 rounded-full overflow-hidden border-4 border-white shadow-lg">
+                            <img src="assets/img/photo-cv.jpg" alt="Ismaila SY" class="w-full h-full object-cover">
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">September 2022 - Present</span></div>
                     </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">IT Consultant</h3>
-                            <div class="subheading mb-3">Enoo Tech</div>
-                            <p> My mission is to bring innovation. With expertise in Web/Mobile Development, Network Deployment, Corporate Branding, Business Intelligence Solutions, and IT Consulting.</p>
-                            <ul>
-                                <li>Business Intelligence Solutions Development</li>
-                                <li>Web/Mobile Development</li>
-                                <li>Plan and design a new computer network for a business</li>
-                            </ul>
+                    <div class="md:w-2/3 md:pl-12 text-center md:text-left">
+                        <h1 class="text-4xl md:text-5xl font-bold mb-2">Ismaila <span class="text-blue-300">SY</span></h1>
+                        <h2 class="text-xl md:text-2xl font-semibold mb-4">PhD Researcher in Cybersecurity</h2>
+                        <p class="text-lg mb-6 max-w-2xl">
+                            Passionate about next-generation network security with expertise in AI-based security solutions, 
+                            committed to staying updated on the latest advancements in cybersecurity.
+                        </p>
+                        <div class="flex flex-col sm:flex-row items-center sm:space-x-4 mb-6">
+                            <div class="flex items-center mb-2 sm:mb-0">
+                                <i class="fas fa-map-marker-alt mr-2"></i>
+                                <span>Pikine Icotaf, Dakar, Sénégal</span>
+                            </div>
+                            <div class="flex items-center mb-2 sm:mb-0">
+                                <i class="fas fa-phone mr-2"></i>
+                                <span>(221) 77 122-22-85</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-envelope mr-2"></i>
+                                <a href="mailto:ismaila.sy@uadb.edu.sn" class="hover:underline">ismaila.sy@uadb.edu.sn</a>
+                            </div>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">February 2022 - Present (Part-time)</span></div>
-                    </div>
-                </div>
-            </section>
-            <hr class="m-0" />
-            <!-- Education-->
-            <section class="resume-section" id="education">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Education</h2>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Alioune DIOP University of Bambey</h3>
-                            <div class="subheading mb-3">Phd in  Computer Science</div>
-                            <div style="text-align: justify;"><strong>Thesis:</strong> Security in Healthcare and Connected Medical Devices: Study and Development of AI and Blockchain-Based Security Solutions for the Protection of Personal Health Data</div>
-                            <!-- <p>In Process </p> -->
+                        <div class="flex justify-center md:justify-start space-x-4">
+                            <a href="https://www.linkedin.com/in/ismaila-sy/" class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-blue-600 hover:bg-blue-100 transition">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://github.com/ismailasy" class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-gray-800 hover:bg-blue-100 transition">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://twitter.com/Syismaila1" class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-blue-400 hover:bg-blue-100 transition">
+                                <i class="fab fa-twitter"></i>
+                            </a>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">2023 - 2026</span></div>
                     </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Alioune DIOP University of Bambey</h3>
-                            <div class="subheading mb-3">Master of Science</div>
-                            <div>Networks and Systems</div>
-                            <p>With Honors</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold mb-12 section-title">Experience</h2>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="card-hover p-6 rounded-lg border border-gray-200 shadow-sm">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold">Information System Engineer</h3>
+                                <p class="text-blue-600 font-medium">Global Business Group</p>
+                            </div>
+                            <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-medium">Sept 2022 - Present</span>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">2020 - 2022</span></div>
+                        <p class="text-gray-600 mb-4">
+                            Responsible for the design, development, and deployment of IT projects, with a particular emphasis on in-house development of human resources (HR) management and reporting solutions.
+                        </p>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                                <span>Designing, developing, and implementing new IT systems</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                                <span>Managing and maintaining existing IT systems</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                                <span>Troubleshooting and resolving IT problems</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                                <span>Collaborating with cross-functional teams</span>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Alioune DIOP University of Bambey</h3>
-                            <div class="subheading mb-3">Bachelor Science</div>
-                            <div>Networks and systems administration</div>
-                            <p>Fairly good mention</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">2016 - 2019</span></div>
-                    </div>
-                </div>
-            </section>
-            <hr class="m-0" />
-            <!-- Skills-->
-            <section class="resume-section" id="skills">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Skills</h2>
-                    <div class="subheading mb-3">Programming Languages & Tools</div>
-                    <ul class="list-inline dev-icons">
-                        <li class="list-inline-item"><i class="fab fa-html5" style="color: #E34F26;"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-css3-alt" style="color: #1572B6;"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-js-square" style="color: #F7DF1E;"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-angular" style="color: #DD0031;"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-react" style="color: #61DAFB;"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-node-js" style="color: #8CC84B;"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-envira" style="color: #47A248;"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-laravel" style="color: #FF2D20;"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-wordpress" style="color: #21759B;"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-npm" style="color: #CB3837;"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-python" style="color: #3776AB;"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-aws" style="color: #FF9900;"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-docker" style="color: #2496ED;"></i></li>
-                    </ul>
-                    <div class="subheading mb-3">Technical Skils</div>
-                    <ul>
-                        <li>Network Protocols and Architecture</li>
-                        <li>Artificial Intelligence</li>
-                        <li>Cybersecurity Fundamentals</li>
-                        <li>Security Technologies</li>
-                        <li>Cryptography</li>
-                        <li>Network Monitoring and Analysis</li>
-                        <li>Research and Analysis</li>
-                        <li>Problem Solving and Critical Thinking</li>
-                    </ul>
-                    <div class="subheading mb-3">Soft Skils</div>
-                    <ul class="fa-ul mb-0">
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Collaboration and Teamwork
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Communication Skills
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Continuous Learning
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Agile Development & Scrum
-                        </li>
-                    </ul>
-                </div>
-            </section>
-            <hr class="m-0" />
-            <!-- Interests-->
-            <section class="resume-section" id="interests">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Research Interests</h2>
-                    <p style="text-align: justify;">In our increasingly interconnected world, where the digital realm intertwines seamlessly with our everyday lives, the significance of safeguarding sensitive information
-                     has reached new heights. My research interests span a wide spectrum of critical domains at this intersection of technology and security. These areas not only signify the transformative potential of modern
-                      technology but also underscore the pressing necessity of comprehensive security measures to protect our digital assets. Among my primary concerns is the imperative to ensure the utmost security for medical data,
-                       given its inherent sensitivity and the profound impact it holds on individuals' well-being and privacy.</p>
-                    <p style="text-align: justify;">
-                        My research focuses on : 
-                    </p>
-                    <ul>
-                        <li><strong>Internet of Things (IoT):</strong> The IoT represents a dynamic landscape of interconnected devices and sensors, promising to revolutionize how we interact with technology. However, ensuring the security and privacy of IoT data is paramount, as vulnerabilities in this ecosystem can have far-reaching consequences.</li>
-                        <li><strong>Wireless Networks:</strong> The proliferation of wireless communication technologies has opened up new possibilities for connectivity, but it has also introduced security challenges. My research delves into the vulnerabilities of wireless networks and strategies to protect against cyber threats.</li>
-                        <li><strong>Next-Generation Networks:</strong> Next-gen networks hold the key to enhanced performance, scalability, and innovation. Yet, as we move toward these advanced architectures, it is crucial to address security concerns to ensure the integrity and reliability of these networks.</li>
-                        <li><strong>Steganography:</strong> Steganography is the art of concealing information within digital media, such as images or audio files. This field explores the covert communication techniques that can be harnessed for secure data transmission and privacy protection.</li>
-                        <li><strong>Medical Data Security:</strong> Within the realm of healthcare, the protection of sensitive medical data is of paramount importance. My research focuses on developing robust security measures to safeguard this data, ensuring it remains confidential and unaltered, all while maintaining accessibility for authorized entities.</li>
-                        <li><strong> Blockchain: </strong>  Blockchain technology is reshaping industries with its decentralized and tamper-resistant nature. My research in this area focuses on the security and privacy aspects of blockchain applications, exploring how this technology can be leveraged for secure transactions and data management.</li>
-                    </ul>
-                </div>
-            </section>
-            <hr class="m-0" />
-            <!-- Awards-->
-            <!-- <section class="resume-section" id="awards">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Awards & Certifications</h2>
-                    <ul class="fa-ul mb-0">
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            Google Analytics Certified Developer
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            Mobile Web Specialist - Google Certification
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            1
-                            <sup>st</sup>
-                            Place - University of Colorado Boulder - Emerging Tech Competition 2009
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            1
-                            <sup>st</sup>
-                            Place - University of Colorado Boulder - Adobe Creative Jam 2008 (UI Design Category)
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            2
-                            <sup>nd</sup>
-                            Place - University of Colorado Boulder - Emerging Tech Competition 2008
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            1
-                            <sup>st</sup>
-                            Place - James Buchanan High School - Hackathon 2006
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            3
-                            <sup>rd</sup>
-                            Place - James Buchanan High School - Hackathon 2005
-                        </li>
-                    </ul>
-                </div>
-            </section> -->
-            <hr class="m-0" />
-            <section class="resume-section" id="publications">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Publications</h2>
                     
-                    <!-- Publication 1 -->
-                    <div class="card mb-3">
-                        <div class="card-body">
-                            <h5 class="card-title">
+                    <div class="card-hover p-6 rounded-lg border border-gray-200 shadow-sm">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold">IT Consultant</h3>
+                                <p class="text-blue-600 font-medium">Enoo Tech</p>
+                            </div>
+                            <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-medium">Feb 2022 - Present</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            My mission is to bring innovation. With expertise in Web/Mobile Development, Network Deployment, Corporate Branding, Business Intelligence Solutions, and IT Consulting.
+                        </p>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                                <span>Business Intelligence Solutions Development</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                                <span>Web/Mobile Development</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                                <span>Plan and design computer networks for businesses</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold mb-12 section-title">Education</h2>
+                
+                <div class="space-y-8">
+                    <div class="card-hover p-6 rounded-lg bg-white border border-gray-200 shadow-sm">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold">PhD in Computer Science</h3>
+                                <p class="text-blue-600 font-medium">Alioune DIOP University of Bambey</p>
+                            </div>
+                            <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-medium">2023 - 2026</span>
+                        </div>
+                        <div class="mb-4">
+                            <p class="font-medium text-gray-700">Thesis:</p>
+                            <p class="text-gray-600">Security in Healthcare and Connected Medical Devices: Study and Development of AI and Blockchain-Based Security Solutions for the Protection of Personal Health Data</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card-hover p-6 rounded-lg bg-white border border-gray-200 shadow-sm">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold">Master of Science</h3>
+                                <p class="text-blue-600 font-medium">Alioune DIOP University of Bambey</p>
+                            </div>
+                            <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-medium">2020 - 2022</span>
+                        </div>
+                        <div class="mb-2">
+                            <p class="text-gray-600">Networks and Systems</p>
+                        </div>
+                        <span class="inline-block bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-medium">With Honors</span>
+                    </div>
+                    
+                    <div class="card-hover p-6 rounded-lg bg-white border border-gray-200 shadow-sm">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold">Bachelor of Science</h3>
+                                <p class="text-blue-600 font-medium">Alioune DIOP University of Bambey</p>
+                            </div>
+                            <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-medium">2016 - 2019</span>
+                        </div>
+                        <div class="mb-2">
+                            <p class="text-gray-600">Networks and systems administration</p>
+                        </div>
+                        <span class="inline-block bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-medium">Fairly good mention</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold mb-12 section-title">Skills</h2>
+                
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div>
+                        <h3 class="text-xl font-bold mb-6 text-blue-600">Technical Skills</h3>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-semibold mb-3">Programming Languages & Tools</h4>
+                            <div class="flex flex-wrap gap-3 mb-4">
+                                <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">HTML5</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">CSS3</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">JavaScript</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">Angular</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">React</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">Node.js</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">MongoDB</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">Laravel</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">WordPress</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">NPM</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">Python</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">AWS</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">Docker</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-semibold mb-3">Cybersecurity Expertise</h4>
+                            <div class="space-y-4">
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span class="text-sm font-medium">Network Security</span>
+                                        <span class="text-sm font-medium">90%</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2">
+                                        <div class="bg-blue-600 h-2 rounded-full skill-bar" style="width: 90%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span class="text-sm font-medium">AI Security Solutions</span>
+                                        <span class="text-sm font-medium">85%</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2">
+                                        <div class="bg-blue-600 h-2 rounded-full skill-bar" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span class="text-sm font-medium">Cryptography</span>
+                                        <span class="text-sm font-medium">80%</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2">
+                                        <div class="bg-blue-600 h-2 rounded-full skill-bar" style="width: 80%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-bold mb-6 text-blue-600">Soft Skills</h3>
+                        
+                        <div class="grid grid-cols-2 gap-4 mb-8">
+                            <div class="p-4 bg-blue-50 rounded-lg text-center">
+                                <i class="fas fa-users text-blue-600 text-2xl mb-2"></i>
+                                <p class="font-medium">Collaboration</p>
+                            </div>
+                            <div class="p-4 bg-blue-50 rounded-lg text-center">
+                                <i class="fas fa-comments text-blue-600 text-2xl mb-2"></i>
+                                <p class="font-medium">Communication</p>
+                            </div>
+                            <div class="p-4 bg-blue-50 rounded-lg text-center">
+                                <i class="fas fa-lightbulb text-blue-600 text-2xl mb-2"></i>
+                                <p class="font-medium">Problem Solving</p>
+                            </div>
+                            <div class="p-4 bg-blue-50 rounded-lg text-center">
+                                <i class="fas fa-book text-blue-600 text-2xl mb-2"></i>
+                                <p class="font-medium">Continuous Learning</p>
+                            </div>
+                        </div>
+                        
+                        <h3 class="text-xl font-bold mb-4 text-blue-600">Languages</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium">French</span>
+                                    <span class="text-sm font-medium">Native</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="bg-blue-600 h-2 rounded-full" style="width: 100%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium">English</span>
+                                    <span class="text-sm font-medium">Fluent</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="bg-blue-600 h-2 rounded-full" style="width: 85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Interests Section -->
+        <section id="interests" class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold mb-12 section-title">Research Interests</h2>
+                
+                <p class="text-lg text-gray-700 mb-8 max-w-3xl">
+                    In our increasingly interconnected world, where the digital realm intertwines seamlessly with our everyday lives, 
+                    the significance of safeguarding sensitive information has reached new heights. My research focuses on developing 
+                    innovative security solutions for critical domains.
+                </p>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="card-hover bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 mb-4">
+                            <i class="fas fa-shield-alt text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">IoT Security</h3>
+                        <p class="text-gray-600">Securing interconnected devices and sensors in the Internet of Things ecosystem against emerging threats.</p>
+                    </div>
+                    
+                    <div class="card-hover bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 mb-4">
+                            <i class="fas fa-wifi text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Wireless Networks</h3>
+                        <p class="text-gray-600">Researching vulnerabilities in wireless communication and developing protection strategies.</p>
+                    </div>
+                    
+                    <div class="card-hover bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 mb-4">
+                            <i class="fas fa-network-wired text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Next-Gen Networks</h3>
+                        <p class="text-gray-600">Addressing security concerns in advanced network architectures for enhanced performance.</p>
+                    </div>
+                    
+                    <div class="card-hover bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 mb-4">
+                            <i class="fas fa-lock text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Steganography</h3>
+                        <p class="text-gray-600">Exploring covert communication techniques for secure data transmission and privacy protection.</p>
+                    </div>
+                    
+                    <div class="card-hover bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 mb-4">
+                            <i class="fas fa-heartbeat text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Medical Data Security</h3>
+                        <p class="text-gray-600">Developing robust security measures to safeguard sensitive healthcare information.</p>
+                    </div>
+                    
+                    <div class="card-hover bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 mb-4">
+                            <i class="fas fa-link text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Blockchain</h3>
+                        <p class="text-gray-600">Leveraging decentralized technology for secure transactions and data management.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Publications Section -->
+        <section id="publications" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold mb-12 section-title">Publications</h2>
+                
+                <div class="space-y-6">
+                    <div class="card-hover p-6 rounded-lg border border-gray-200 shadow-sm hover:border-blue-300 transition">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold text-blue-700 hover:text-blue-900">
                                 <a href="https://www.researchgate.net/publication/374287336_Toward_a_Deep_Learning-based_intelligent_IDS_for_personal_data_security">
-                                    Toward a Deep Learning-based intelligent IDS for personal data security</a>
-                            </h5>
-                            <p class="card-text"><strong>Authors:</strong> Ismaila SY, Birahime DIOUF, Abdou Khadre DIOP</p>
-                            <p class="card-text"><strong>Event:</strong> UFR SATIC Scientific Days 2023</p>
-                            <p class="card-text"><strong>Type:</strong> Poster</p>
-                            <p class="card-text"><strong>Year:</strong> 2023</p>
+                                    Toward a Deep Learning-based intelligent IDS for personal data security
+                                </a>
+                            </h3>
+                            <span class="mt-2 md:mt-0 bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-medium">2023</span>
                         </div>
-                    </div>
-            
-                    <!-- Publication 2 -->
-                    <div class="card mb-3">
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                <a href="https://hal.science/hal-04288626">Enhancing Security in Connected Medical IoT Networks
-                                    through Deep Learning-Based Anomaly Detection</a>
-                            </h5>
-                            <p class="card-text"><strong>Authors:</strong> Ismaila SY, Birahime DIOUF, Abdou Khadre DIOP, Cyril DROCOURT, David DURAND</p>
-                            <p class="card-text"><strong>Event:</strong> The 8th International Conference on Mobile, Secure and Programmable Networking</p>
-                            <p class="card-text"><strong>Type:</strong> Paper</p>
-                            <p class="card-text"><strong>Year:</strong> 2024</p>
-                        </div>
-                    </div>
-                     <!-- Publication 3 -->
-                    <div class="card mb-3">
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                <a href="https://dx.doi.org/10.1201/9788770047746-3">AI-driven Threat Management in Healthcare Systems</a>
-                            </h5>
-                            <p class="card-text"><strong>Authors:</strong> Ismaila SY, Birahime DIOUF, Abdou Khadre DIOP, Cyril DROCOURT, David DURAND</p>
-                            <p class="card-text"><strong>Book:</strong>  Intelligent Cybersecurity and Resilience for Critical Industries: Challenges and Applications, 1, River Publishers,</p>
-                            <p class="card-text"><strong>Type:</strong>Book Chapter</p>
-                            <p class="card-text"><strong>Year:</strong> 2025</p>
-                        </div>
+                        <p class="text-gray-600 mb-2"><strong>Authors:</strong> Ismaila SY, Birahime DIOUF, Abdou Khadre DIOP</p>
+                        <p class="text-gray-600 mb-2"><strong>Event:</strong> UFR SATIC Scientific Days 2023</p>
+                        <p class="text-gray-600"><strong>Type:</strong> Poster</p>
                     </div>
                     
-                    <!-- <div class="card mb-3">
-                        <div class="card-body">
-                            <h5 class="card-title" href="https://hal.science/hal-04288626">Enhancing Security in Connected Medical IoT Networks
-                                through Deep Learning-Based Anomaly Detection</h5>
-                            <p class="card-text"><strong>Authors:</strong> Ismaila SY, Birahime DIOUF,Abdou Khadre DIOP, Cyril DROCOURT, David DURAND</p>
-                            <p class="card-text"><strong>Event:</strong>The 8th International Conference on Mobile, Secure and Programmable Networking</p>
-                            <p class="card-text"><strong>Type:</strong>Paper</p>
-                            <p class="card-text"><strong>Year:</strong> 2023</p>
+                    <div class="card-hover p-6 rounded-lg border border-gray-200 shadow-sm hover:border-blue-300 transition">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold text-blue-700 hover:text-blue-900">
+                                <a href="https://hal.science/hal-04288626">
+                                    Enhancing Security in Connected Medical IoT Networks through Deep Learning-Based Anomaly Detection
+                                </a>
+                            </h3>
+                            <span class="mt-2 md:mt-0 bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-medium">2024</span>
                         </div>
-                    </div> -->
-            
-                    <!-- Publication 3 -->
-                    <!-- <div class="card mb-3">
-                        <div class="card-body">
-                            <h5 class="card-title">Title of Article 2</h5>
-                            <p class="card-text"><strong>Authors:</strong> Mary Wilson</p>
-                            <p class="card-text"><strong>Event:</strong> Annual Tech Symposium 2021</p>
-                            <p class="card-text"><strong>Type:</strong> Article</p>
-                            <p class="card-text"><strong>Year:</strong> 2021</p>
+                        <p class="text-gray-600 mb-2"><strong>Authors:</strong> Ismaila SY, Birahime DIOUF, Abdou Khadre DIOP, Cyril DROCOURT, David DURAND</p>
+                        <p class="text-gray-600 mb-2"><strong>Event:</strong> The 8th International Conference on Mobile, Secure and Programmable Networking</p>
+                        <p class="text-gray-600"><strong>Type:</strong> Paper</p>
+                    </div>
+                    
+                    <div class="card-hover p-6 rounded-lg border border-gray-200 shadow-sm hover:border-blue-300 transition">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold text-blue-700 hover:text-blue-900">
+                                <a href="https://dx.doi.org/10.1201/9788770047746-3">
+                                    AI-driven Threat Management in Healthcare Systems
+                                </a>
+                            </h3>
+                            <span class="mt-2 md:mt-0 bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-medium">2025</span>
                         </div>
-                    </div> -->
+                        <p class="text-gray-600 mb-2"><strong>Authors:</strong> Ismaila SY, Birahime DIOUF, Abdou Khadre DIOP, Cyril DROCOURT, David DURAND</p>
+                        <p class="text-gray-600 mb-2"><strong>Book:</strong> Intelligent Cybersecurity and Resilience for Critical Industries: Challenges and Applications, River Publishers</p>
+                        <p class="text-gray-600"><strong>Type:</strong> Book Chapter</p>
+                    </div>
                 </div>
-            </section>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="py-8 gradient-bg text-white">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="mb-4 md:mb-0">
+                        <p class="text-lg font-semibold">Ismaila SY</p>
+                        <p class="text-blue-100">PhD Researcher in Cybersecurity</p>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="https://www.linkedin.com/in/ismaila-sy/" class="w-10 h-10 rounded-full bg-blue-700 flex items-center justify-center text-white hover:bg-blue-600 transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/ismailasy" class="w-10 h-10 rounded-full bg-blue-700 flex items-center justify-center text-white hover:bg-blue-600 transition">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://twitter.com/Syismaila1" class="w-10 h-10 rounded-full bg-blue-700 flex items-center justify-center text-white hover:bg-blue-600 transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="mt-6 pt-6 border-t border-blue-400 text-center text-blue-100">
+                    <p>&copy; 2023 Ismaila SY. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Back to Top Button -->
+        <button id="back-to-top" class="fixed bottom-6 right-6 w-12 h-12 rounded-full bg-blue-600 text-white shadow-md hidden">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+
+        <script>
+            // Mobile menu toggle
+            document.getElementById('mobile-menu-button').addEventListener('click', function() {
+                document.getElementById('mobile-menu').classList.toggle('hidden');
+            });
             
-        </div>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
+            // Back to top button
+            const backToTopButton = document.getElementById('back-to-top');
+            
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.classList.remove('hidden');
+                } else {
+                    backToTopButton.classList.add('hidden');
+                }
+            });
+            
+            backToTopButton.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+            
+            // Animate skill bars when in viewport
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const skillBars = entry.target.querySelectorAll('.skill-bar');
+                        skillBars.forEach(bar => {
+                            const width = bar.style.width;
+                            bar.style.width = '0';
+                            setTimeout(() => {
+                                bar.style.width = width;
+                            }, 100);
+                        });
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            observer.observe(document.getElementById('skills'));
+        </script>
     </body>
 </html>
