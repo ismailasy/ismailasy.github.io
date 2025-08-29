@@ -12,7 +12,7 @@
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
         <!-- Font Awesome icons -->
-        <script src="https://kit.fontawesome.com/6f3dce9d65.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         <style>
             body {
                 font-family: 'Inter', sans-serif;
@@ -55,8 +55,12 @@
                 background: #0ea5e9;
                 transition: width 0.3s ease;
             }
-            .nav-link:hover:after {
+            .nav-link:hover:after, .nav-link.active:after {
                 width: 100%;
+            }
+            .nav-link.active {
+                color: #0ea5e9;
+                font-weight: 600;
             }
             .card-hover {
                 transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -104,7 +108,7 @@
                 <div class="flex justify-between items-center py-4">
                     <a href="#" class="text-xl font-bold gradient-text">Ismaila SY</a>
                     <div class="hidden md:flex space-x-8">
-                        <a href="#about" class="nav-link">About</a>
+                        <a href="#about" class="nav-link active">About</a>
                         <a href="#experience" class="nav-link">Experience</a>
                         <a href="#education" class="nav-link">Education</a>
                         <a href="#skills" class="nav-link">Skills</a>
@@ -123,12 +127,12 @@
             <!-- Mobile menu -->
             <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
                 <div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
-                    <a href="#about" class="py-2 px-4 rounded hover:bg-gray-100">About</a>
-                    <a href="#experience" class="py-2 px-4 rounded hover:bg-gray-100">Experience</a>
-                    <a href="#education" class="py-2 px-4 rounded hover:bg-gray-100">Education</a>
-                    <a href="#skills" class="py-2 px-4 rounded hover:bg-gray-100">Skills</a>
-                    <a href="#interests" class="py-2 px-4 rounded hover:bg-gray-100">Research</a>
-                    <a href="#publications" class="py-2 px-4 rounded hover:bg-gray-100">Publications</a>
+                    <a href="#about" class="py-2 px-4 rounded hover:bg-gray-100 nav-mobile-link active">About</a>
+                    <a href="#experience" class="py-2 px-4 rounded hover:bg-gray-100 nav-mobile-link">Experience</a>
+                    <a href="#education" class="py-2 px-4 rounded hover:bg-gray-100 nav-mobile-link">Education</a>
+                    <a href="#skills" class="py-2 px-4 rounded hover:bg-gray-100 nav-mobile-link">Skills</a>
+                    <a href="#interests" class="py-2 px-4 rounded hover:bg-gray-100 nav-mobile-link">Research</a>
+                    <a href="#publications" class="py-2 px-4 rounded hover:bg-gray-100 nav-mobile-link">Publications</a>
                 </div>
             </div>
         </nav>
@@ -138,8 +142,8 @@
             <div class="container mx-auto px-4">
                 <div class="flex flex-col md:flex-row items-center">
                     <div class="md:w-1/3 mb-8 md:mb-0 flex justify-center">
-                        <div class="w-48 h-48 rounded-full overflow-hidden border-4 border-white shadow-lg">
-                            <img src="assets/img/photo-cv.jpg" alt="Ismaila SY" class="w-full h-full object-cover">
+                        <div class="w-48 h-48 rounded-full overflow-hidden border-4 border-white shadow-lg bg-gray-200 flex items-center justify-center">
+                            <span class="text-6xl text-gray-400"><i class="fas fa-user"></i></span>
                         </div>
                     </div>
                     <div class="md:w-2/3 md:pl-12 text-center md:text-left">
@@ -590,6 +594,48 @@
             }, { threshold: 0.5 });
             
             observer.observe(document.getElementById('skills'));
+            
+            // Active section highlighting
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            const mobileNavLinks = document.querySelectorAll('.nav-mobile-link');
+            
+            function highlightActiveSection() {
+                let currentSection = '';
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    
+                    if (window.scrollY >= sectionTop - 100) {
+                        currentSection = section.getAttribute('id');
+                    }
+                });
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').substring(1) === currentSection) {
+                        link.classList.add('active');
+                    }
+                });
+                
+                mobileNavLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').substring(1) === currentSection) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+            
+            window.addEventListener('scroll', highlightActiveSection);
+            window.addEventListener('load', highlightActiveSection);
+            
+            // Close mobile menu when clicking on a link
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                });
+            });
         </script>
     </body>
 </html>
