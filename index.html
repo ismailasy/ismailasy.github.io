@@ -546,7 +546,7 @@
                     </div>
                 </div>
                 <div class="mt-6 pt-6 border-t border-blue-400 text-center text-blue-100">
-                    <p>&copy; 2023 Ismaila SY. All rights reserved.</p>
+                   <p>&copy; <span id="year"></span> Ismaila SY. Tous droits réservés.</p>
                 </div>
             </div>
         </footer>
@@ -561,6 +561,8 @@
             document.getElementById('mobile-menu-button').addEventListener('click', function() {
                 document.getElementById('mobile-menu').classList.toggle('hidden');
             });
+
+             document.getElementById("year").textContent = new Date().getFullYear();
             
             // Back to top button
             const backToTopButton = document.getElementById('back-to-top');
