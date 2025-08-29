@@ -102,9 +102,7 @@
         </style>
     </head>
     <body class="bg-gray-50 text-gray-800">
-        <div id="loader" class="fixed inset-0 bg-[#1A55A2] flex items-center justify-center z-50">
-              <div class="w-16 h-16 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
-        </div>
+       
         <!-- Navigation -->
         <nav class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
             <div class="container mx-auto px-4">
@@ -768,11 +766,7 @@
         }
         
         animate();
-             window.addEventListener("load", () => {
-          document.getElementById("loader").style.display = "none";
-          document.getElementById("content").classList.remove("hidden");
-      });
-
+        
         </script>
     </body>
 </html>
