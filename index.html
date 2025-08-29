@@ -139,6 +139,13 @@
 
         <!-- Hero Section -->
         <section id="about" class="pt-28 pb-16 gradient-bg text-white">
+            <!-- Background animé -->
+        <div class="absolute inset-0 z-0">
+            <canvas id="neural-bg" class="w-full h-full"></canvas>
+        </div>
+
+        <!-- Overlay pour dégradé lisible -->
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-indigo-900/80 to-black/90 z-10"></div>
             <div class="container mx-auto px-4">
                 <div class="flex flex-col md:flex-row items-center">
                     <div class="md:w-1/3 mb-8 md:mb-0 flex justify-center">
@@ -684,6 +691,65 @@
                     document.getElementById('mobile-menu').classList.add('hidden');
                 });
             });
+            const canvas = document.getElementById("neural-bg");
+        const ctx = canvas.getContext("2d");
+        let particles = [];
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = document.getElementById("about").offsetHeight;
+        }
+
+        window.addEventListener("resize", resizeCanvas);
+        resizeCanvas();
+
+        // Créer particules
+        for (let i = 0; i < 80; i++) {
+            particles.push({
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height,
+                vx: (Math.random() - 0.5) * 0.7,
+                vy: (Math.random() - 0.5) * 0.7,
+            });
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = "rgba(0, 255, 255, 0.7)";
+
+            particles.forEach(p => {
+                p.x += p.vx;
+                p.y += p.vy;
+
+                if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+                if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, 2, 0, Math.PI * 2);
+                ctx.fill();
+            });
+
+            // Relier particules proches
+            for (let i = 0; i < particles.length; i++) {
+                for (let j = i + 1; j < particles.length; j++) {
+                    let dx = particles[i].x - particles[j].x;
+                    let dy = particles[i].y - particles[j].y;
+                    let dist = Math.sqrt(dx * dx + dy * dy);
+
+                    if (dist < 120) {
+                        ctx.strokeStyle = "rgba(0, 200, 255, 0.2)";
+                        ctx.beginPath();
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.stroke();
+                    }
+                }
+            }
+
+            requestAnimationFrame(animate);
+        }
+
+        animate();
         </script>
     </body>
 </html>
